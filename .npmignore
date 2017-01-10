@@ -1,0 +1,4 @@
+# ignore all the things
+*
+# except the build
+!dist
