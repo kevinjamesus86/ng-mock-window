@@ -70,10 +70,10 @@ export default function mockWindowProvider({
     mockLocationDescriptors.href = (function() {
       var href = location.href;
       return {
-        get: function getHref() {
+        get() {
           return href;
         },
-        set: function setHref(nextHref) {
+        set(nextHref) {
           href = nextHref;
           // Prevent double warning when setting
           // location.href from mockLocation
