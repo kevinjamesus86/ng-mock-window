@@ -3,20 +3,6 @@ export function warn(...args) {
   console.warn(...args);
 }
 
-export function trap(value) {
-  let currentValue = value;
-  return {
-    enumerable: true,
-    configurable: true,
-    set(nextValue) {
-      currentValue = nextValue;
-    },
-    get() {
-      return currentValue;
-    }
-  };
-}
-
 export function hasOwnProperty(object, property) {
   return Object.prototype.hasOwnProperty.call(object, property);
 }

@@ -9,19 +9,22 @@
     "registry": "https://registry.npmjs.org/"
   },
   "scripts": {
-    "lint": "eslint src",
-    "build:dev": "webpack",
-    "build:prod": "webpack --optimize-minimize",
-    "prepublish": "npm run build:prod"
+    "dev": "webpack -w",
+    "build": "webpack --optimize-minimize",
+    "test": "mocha --require babel-register --reporter spec",
+    "prepublish": "npm run build"
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",
     "babel-core": "^6.21.0",
     "babel-loader": "^6.2.10",
     "babel-preset-latest": "^6.16.0",
+    "babel-register": "^6.18.0",
     "eslint": "^3.13.1",
+    "eslint-loader": "^1.6.1",
     "globals": "^9.14.0",
     "json-loader": "^0.5.4",
+    "mocha": "^3.2.0",
     "webpack": "^1.14.0"
   },
   "peerDependencies": {
